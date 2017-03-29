@@ -10,9 +10,10 @@ namespace GC_BonusLab5_ObjectOrientedValidation
     {
         static void Main(string[] args)
         {
+            OOValidator num = new OOValidator();
             Console.WriteLine("Welcome to the Validation Tester Application!");
-            Console.WriteLine("\nInt Test");
-            Console.WriteLine("Enter an integer between -100 and 100: ");
+            Console.WriteLine("\nInt Test");          
+            Console.WriteLine(num.getIntWithinRange("", -100, 100));
             Console.WriteLine("\nDouble Test");
             Console.WriteLine("Enter any number between -100 and 100: ");
             Console.ReadLine();

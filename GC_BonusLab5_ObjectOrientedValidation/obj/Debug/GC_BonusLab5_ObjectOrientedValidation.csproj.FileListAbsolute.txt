@@ -3,3 +3,4 @@ c:\users\peter\onedrive\documents\visual studio 2015\Projects\GC_BonusLab5_Objec
 c:\users\peter\onedrive\documents\visual studio 2015\Projects\GC_BonusLab5_ObjectOrientedValidation\GC_BonusLab5_ObjectOrientedValidation\bin\Debug\GC_BonusLab5_ObjectOrientedValidation.pdb
 c:\users\peter\onedrive\documents\visual studio 2015\Projects\GC_BonusLab5_ObjectOrientedValidation\GC_BonusLab5_ObjectOrientedValidation\obj\Debug\GC_BonusLab5_ObjectOrientedValidation.exe
 c:\users\peter\onedrive\documents\visual studio 2015\Projects\GC_BonusLab5_ObjectOrientedValidation\GC_BonusLab5_ObjectOrientedValidation\obj\Debug\GC_BonusLab5_ObjectOrientedValidation.pdb
+c:\users\peter\onedrive\documents\visual studio 2015\Projects\GC_BonusLab5_ObjectOrientedValidation\GC_BonusLab5_ObjectOrientedValidation\obj\Debug\GC_BonusLab5_ObjectOrientedValidation.csprojResolveAssemblyReference.cache
