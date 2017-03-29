@@ -9,6 +9,7 @@ namespace GC_BonusLab5_ObjectOrientedValidation
     class OOValidator
     {
         int _myInt;
+        double _myDouble;
 
         public OOValidator()
         {
@@ -49,6 +50,38 @@ namespace GC_BonusLab5_ObjectOrientedValidation
             return myInt;
         }
 
-       
+        public double getDouble(string prompt)
+        {
+            double.TryParse(prompt, out _myDouble);
+            return _myDouble;
+        }
+
+        public double getDoubleWithinRange(string prompt, double min, double max)
+        {
+            bool run = true;
+            double myDouble = 0;
+            while (run)
+            {
+                Console.WriteLine("Enter a double between -100 and 100: ");
+                bool success = double.TryParse(Console.ReadLine(), out myDouble);
+                if (success == false)
+                {
+                    Console.WriteLine("Error! Invalid input. Please try again.");
+                }
+                else if (myDouble >= min && myDouble <= max)
+                {
+                    run = false;
+                }
+                else if (myDouble < min)
+                {
+                    Console.WriteLine("Error! Number must be greater than " + (min - 1));
+                }
+                else if (myDouble > max)
+                {
+                    Console.WriteLine("Error! Number must be less than " + (max + 1));
+                }
+            }
+            return myDouble;
+        }
     }
 }
