@@ -17,7 +17,9 @@ namespace GC_BonusLab5_ObjectOrientedValidation
             num.getIntWithinRange("", -100, 100);
             Console.WriteLine("\nDouble Test");
             num.getDoubleWithinRange("", -100, 100);
+            Console.WriteLine("\nString Test");
             word.GetRequiredString("word");
+            word.GetChoiceString("", "and", "but");
             Console.ReadLine();
         }
     }

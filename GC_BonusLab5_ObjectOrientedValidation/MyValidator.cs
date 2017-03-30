@@ -24,7 +24,7 @@ namespace GC_BonusLab5_ObjectOrientedValidation
                 _output = Console.ReadLine();
                 if (_output != prompt)
                 {
-                    Console.WriteLine("You did not input " + prompt + " . Please try again.");
+                    Console.WriteLine("You did not input " + prompt + ". Please try again.");
                 }
                 else
                 {
@@ -36,7 +36,21 @@ namespace GC_BonusLab5_ObjectOrientedValidation
 
         public string GetChoiceString (string prompt, string s1, string s2)
         {
-
+            bool run = true;
+            while (run)
+            {
+                Console.WriteLine("Input either the word " + s1 + " or " + s2);
+                prompt = Console.ReadLine();
+                _output = prompt;
+                if (_output != s1 && _output != s2)
+                {
+                    Console.WriteLine("You did not input " + s1 + " or " + s2 + ". Please try again.");
+                }
+                else
+                {
+                    run = false;
+                }
+            }
             return _output;
         }
     }
