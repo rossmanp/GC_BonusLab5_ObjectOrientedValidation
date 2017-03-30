@@ -17,26 +17,12 @@ namespace GC_BonusLab5_ObjectOrientedValidation
         }       
 
         public int getInt (string prompt)
-        {
-            int _checkNum;
-            OOValidator num = new OOValidator();
-            bool run = true;
-            bool success = int.TryParse(prompt, out _myInt);
-            while (run)
-            {
-                if (success == false)
-                {
-                    Console.WriteLine("Error! Invalid input. Please try again.");
-                    _checkNum = num.getIntWithinRange("", -100, 100);
-                    if (_checkNum.GetType() == typeof(int))
-                    {
-                        run = false;
-                    }
-                }
-                else
-                {
-                    run = false;
-                }
+        {            
+            int.TryParse(prompt, out _myInt);
+            while (!int.TryParse(prompt, out _myInt))
+            {        
+              Console.Write("The value must be an integer, try again: ");
+              prompt = Console.ReadLine();            
             }
             return _myInt;
         }
@@ -48,44 +34,30 @@ namespace GC_BonusLab5_ObjectOrientedValidation
             while (run)
             {
                 Console.WriteLine("Enter an integer between -100 and 100: ");
-                _myInt = num.getInt(Console.ReadLine());           
-                if (_myInt >= min && _myInt <= max)
-                {
-                    run = false;
-                }
-                else if (_myInt < min)
+                _myInt = num.getInt(Console.ReadLine());
+                if (_myInt < min)
                 {
                     Console.WriteLine("Error! Number must be greater than " + (min - 1));
                 }
                 else if (_myInt > max)
                 {
                     Console.WriteLine("Error! Number must be less than " + (max + 1));
-                }                             
+                }
+                else
+                {
+                    run = false;
+                }
             }
             return _myInt;
         }
 
         public double getDouble(string prompt)
         {
-            double _checkNum;
-            OOValidator num = new OOValidator();
-            bool run = true;
-            bool success = double.TryParse(prompt, out _myDouble);
-            while (run)
+            double.TryParse(prompt, out _myDouble);
+            while (!double.TryParse(prompt, out _myDouble))
             {
-                if (success == false)
-                {
-                    Console.WriteLine("Error! Invalid input. Please try again.");                  
-                    _checkNum = num.getDoubleWithinRange("", -100, 100);
-                    if (_checkNum.GetType() == typeof(double))
-                    {
-                        run = false;
-                    }
-                }
-                else
-                {
-                    run = false;
-                }
+                Console.Write("The value must be a number, try again: ");
+                prompt = Console.ReadLine();
             }
             return _myDouble;
         }
@@ -93,26 +65,25 @@ namespace GC_BonusLab5_ObjectOrientedValidation
         public double getDoubleWithinRange(string prompt, double min, double max)
         {
             bool run = true;
-            double myDouble = 0;
             OOValidator num = new OOValidator();
             while (run)
             {
                 Console.WriteLine("Enter a double between -100 and 100: ");              
                 _myDouble = num.getDouble(Console.ReadLine());
-                if (myDouble >= min && myDouble <= max)
-                {
-                    run = false;
-                }
-                else if (myDouble < min)
+                if (_myDouble < min)
                 {
                     Console.WriteLine("Error! Number must be greater than " + (min - 1));
                 }
-                else if (myDouble > max)
+                else if (_myDouble > max)
                 {
                     Console.WriteLine("Error! Number must be less than " + (max + 1));
                 }
+                else
+                {
+                    run = false;
+                }
             }
-            return myDouble;
+            return _myDouble;
         }
     }
 }
