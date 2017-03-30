@@ -15,6 +15,9 @@ namespace GC_BonusLab5_ObjectOrientedValidation
 
         }
 
+        //Takes a string as input and requires the user to input
+        //the same string to continue.
+
         public string GetRequiredString (string prompt)
         {
             bool run = true;
@@ -33,6 +36,8 @@ namespace GC_BonusLab5_ObjectOrientedValidation
             }
             return _output;
         }
+
+        //For GetChoiceString the user must enter one of two strings to continue.
 
         public string GetChoiceString (string prompt, string s1, string s2)
         {

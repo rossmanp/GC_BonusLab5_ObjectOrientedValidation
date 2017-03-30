@@ -16,6 +16,8 @@ namespace GC_BonusLab5_ObjectOrientedValidation
 
         }       
 
+        //This method confirms that the user entered an integer, and returns the integer.
+
         public int getInt (string prompt)
         {            
             int.TryParse(prompt, out _myInt);
@@ -26,6 +28,8 @@ namespace GC_BonusLab5_ObjectOrientedValidation
             }
             return _myInt;
         }
+
+        //For the user to proceed, he or she must enter an integer within the specified range.
 
         public int getIntWithinRange(string prompt, int min, int max)
         {
@@ -51,6 +55,8 @@ namespace GC_BonusLab5_ObjectOrientedValidation
             return _myInt;
         }
 
+        //This method confirms that the user entered a number, and returns the number.
+
         public double getDouble(string prompt)
         {
             double.TryParse(prompt, out _myDouble);
@@ -61,6 +67,8 @@ namespace GC_BonusLab5_ObjectOrientedValidation
             }
             return _myDouble;
         }
+
+        //For the user to proceed, he or she must enter a number within the specified range.
 
         public double getDoubleWithinRange(string prompt, double min, double max)
         {

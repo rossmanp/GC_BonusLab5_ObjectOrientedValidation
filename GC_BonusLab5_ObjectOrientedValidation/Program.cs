@@ -10,6 +10,8 @@ namespace GC_BonusLab5_ObjectOrientedValidation
     {
         static void Main(string[] args)
         {
+            //This program instantiates a class of each type and runs the various tests.
+
             OOValidator num = new OOValidator();
             MyValidator word = new MyValidator();
             Console.WriteLine("Welcome to the Validation Tester Application!");
